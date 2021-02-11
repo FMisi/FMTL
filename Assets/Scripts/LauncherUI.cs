@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using UnityEngine;
 using CodeMonkey.Utils;
 
@@ -45,5 +43,14 @@ public class LauncherUI : MonoBehaviour
             Process.Start(path);
         };
 
+        transform.Find("GitHubBtn").GetComponent<Button_UI>().ClickFunc = () => {
+            string path = Application.dataPath + "/../Builds/GitHubDesktop/GitHubDesktop.exe";
+            Process.Start(path);
+        };
+
+        transform.Find("HDSentinelBtn").GetComponent<Button_UI>().ClickFunc = () => {
+            string path = Application.dataPath + "/../Builds/Hard Disk Sentinel/HDSentinel.exe";
+            Process.Start(path);
+        };
     }
 }

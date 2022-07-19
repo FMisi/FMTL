@@ -128,6 +128,7 @@ namespace CodeMonkey.Utils {
             posExit = transform.localPosition;
             posEnter = (Vector2)transform.localPosition + hoverBehaviour_Move_Amount;
             SetHoverBehaviourType(hoverBehaviourType);
+            hoverBehaviour_Image.gameObject.SetActive(false);
 
 #if SOUND_MANAGER
             // Sound Manager
